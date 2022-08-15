@@ -23,7 +23,7 @@ const Registro = (props) => {
 
             <Text style={styles.subHeader}>Informacion conductor.</Text>
             <View style={styles.container}>
-            <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+            <ImageBackground source={require('../assets/Fondo.jpg')} resizeMode="cover" style={styles.container}>
                 <Avatar size={200} source={{ uri: 'https://cdn.pixabay.com/photo/2019/11/03/20/11/portrait-4599553__340.jpg' }}
                     rounded></Avatar>
                 <Text style={styles.fonts} h4>Placa: ALT652L</Text>
@@ -54,11 +54,26 @@ const Registro = (props) => {
           defaultRating={1}
           size={40}
         />
+          <Button
+              title="Registrar"
+              loading={false}
+              loadingProps={{ size: 'small', color: 'white' }}
+              buttonStyle={{
+                backgroundColor: 'rgba(111, 202, 186, 1)',
+                borderRadius: 5,
+              }}
+              titleStyle={{ fontWeight: 'bold', fontSize: 23 }}
+              containerStyle={{
+                marginHorizontal: 50,
+                height: 50,
+                width: 200,
+                marginVertical: 10,
+              }}
+             
+            />
             
             </View>
-            <View style={styles.ratingContainer}>
-
-            </View>
+           
         </>
     );
 
@@ -67,7 +82,7 @@ const Registro = (props) => {
 }
 const styles = StyleSheet.create({
     subHeader: {
-        backgroundColor: "#2089dc",
+        backgroundColor: "#924092",
         color: "white",
         textAlign: "center",
         paddingVertical: 5,
